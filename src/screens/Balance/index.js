@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons'; 
-import Spinner from '../spinner';
+import Spinner from '../../components/spinner';
 
 const Balance = ({balance, spinnerBalance}) => {
 

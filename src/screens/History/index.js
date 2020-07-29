@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native'
 import { ListItem } from 'react-native-elements'; 
 import { SimpleLineIcons } from '@expo/vector-icons'; 
-import Spinner from '../spinner';
+import Spinner from '../../components/spinner';
 import * as Constants from '../../utils/constants';
 
 const History = ({listTransactions, spinnerHistory}) => {
