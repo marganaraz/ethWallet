@@ -14,7 +14,7 @@ const History = ({listTransactions, spinnerHistory}) => {
                     key={i}
                     title={Constants.ACCOUNT === element.to ? "Received" : "Sent"}
                     titleStyle={styles.title}
-                    subtitle={element.hash}
+                    subtitle={Constants.ACCOUNT === element.to ? 'From:' + element.hash : 'To:' + element.hash}
                     subtitleStyle={styles.subtitle}
                     leftIcon={Constants.ACCOUNT === element.to ? <SimpleLineIcons name="arrow-down-circle" size={24} color="black" /> : <SimpleLineIcons name="arrow-up-circle" size={24} color="black" /> }
                     bottomDivider
@@ -53,11 +53,12 @@ const styles = StyleSheet.create ({
         paddingLeft:5
     },
     title:{
-        fontSize: 13,
+        fontSize: 12,
         fontWeight: 'bold',
     },
     subtitle:{  
         fontSize: 10,
+        color:'#3A3A3A'
     },
     sendColor:{
         fontSize: 8,
