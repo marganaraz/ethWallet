@@ -34,7 +34,7 @@ export const getTransactionsByAccount = async (account, startBlockNumber, endBlo
             headers: { 'Content-Type': 'application/x-www-form-urlencoded',
                         'Accept': 'application/json' 
             },
-            url: `http://api.etherscan.io/api?module=account&action=txlistinternal&address=${account}&startblock=${startBlockNumber}&endblock=${endBlockNumber}&sort=asc&apikey=${Constants.KEY_ETHERSCAN}`
+            url: `http://api.etherscan.io/api?module=account&action=txlist&address=${account}&startblock=${startBlockNumber}&endblock=${endBlockNumber}&sort=asc&apikey=${Constants.KEY_ETHERSCAN}`
         };
     
         let response = await axios(options)

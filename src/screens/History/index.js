@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native'
 import { ListItem } from 'react-native-elements'; 
 import { SimpleLineIcons } from '@expo/vector-icons'; 
+import { FontAwesome5 } from '@expo/vector-icons';
 import Spinner from '../../components/spinner';
 import * as Constants from '../../utils/constants';
 
@@ -18,7 +19,7 @@ const History = ({listTransactions, spinnerHistory}) => {
                     subtitleStyle={styles.subtitle}
                     leftIcon={Constants.ACCOUNT === element.to ? <SimpleLineIcons name="arrow-down-circle" size={24} color="black" /> : <SimpleLineIcons name="arrow-up-circle" size={24} color="black" /> }
                     bottomDivider
-                    rightTitle={Constants.ACCOUNT === element.to ? '+' + element.value : '-' + element.value}
+                    rightTitle={element.value === '0' ? '0' : Constants.ACCOUNT === element.to ? '+' + element.value : '-' + element.value}
                     rightTitleStyle={Constants.ACCOUNT === element.to ? styles.receiveColor : styles.sendColor}
                 />
             );
