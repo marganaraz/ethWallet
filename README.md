@@ -1,5 +1,7 @@
 # Crypto Wallet
 
+![home-iOS](https://i.ibb.co/z42ZFZB/home-iOS.png)
+
 ## Configuration project
 
 ```sh
