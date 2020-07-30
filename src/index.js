@@ -31,7 +31,7 @@ const App = () => {
   const getListHashs = async () => {
     let response = await getTransactionsByAccount(Constants.ACCOUNT, null, null)
     if(response.data.status === "1"){
-      setListTransactions(response.data.result)
+      setListTransactions(response.data.result.reverse())
     } else {
       setListTransactions([])
     }

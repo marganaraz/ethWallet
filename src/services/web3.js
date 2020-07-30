@@ -27,7 +27,7 @@ export const getTransactionsByAccount = async (account, startBlockNumber, endBlo
             })
         }
         if (startBlockNumber === null) {
-          startBlockNumber = endBlockNumber - 100000;
+          startBlockNumber = endBlockNumber - 30000;
         }        
         const options = {
             method: 'GET',

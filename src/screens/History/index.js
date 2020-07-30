@@ -9,7 +9,7 @@ import * as Constants from '../../utils/constants';
 const History = ({listTransactions, spinnerHistory}) => {
 
     const list = (listTransactions) => {
-        return listTransactions.reverse().map((element,i) => {
+        return listTransactions.map((element,i) => {
             return (
                 <ListItem
                     key={i}
@@ -30,13 +30,7 @@ const History = ({listTransactions, spinnerHistory}) => {
     <SafeAreaView style={styles.container}>
         <Text style={styles.text}>History</Text>
         <ScrollView>
-            {(!spinnerHistory) &&
-                listTransactions.length !== 0 ?
-                list(listTransactions) : 
-                <View style={styles.noDataText}>
-                    <Text>No existen transacciones en los ultimos días</Text>
-                </View>
-            }
+            {!spinnerHistory && list(listTransactions) }
             { spinnerHistory && <Spinner/>}
         </ScrollView>
     </SafeAreaView>
