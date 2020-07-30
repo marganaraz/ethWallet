@@ -22,7 +22,7 @@ expo start --android
 
 ### Via USB with Android or iOS Phones
 
-- For this step, you need to configure your phone, activated in developer options: USB debugging
+For this step, you need to configure your phone, activated in developer options: USB debugging.
 You must also have the Expo app installed on your phone.
 
 - Android: https://play.google.com/store/apps/details?id=host.exp.exponent&hl=es
