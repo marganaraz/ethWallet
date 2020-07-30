@@ -27,7 +27,7 @@ export const getTransactionsByAccount = async (account, startBlockNumber, endBlo
             })
         }
         if (startBlockNumber === null) {
-          startBlockNumber = endBlockNumber - 5000;
+          startBlockNumber = endBlockNumber - 100000;
         }        
         const options = {
             method: 'GET',
@@ -40,6 +40,6 @@ export const getTransactionsByAccount = async (account, startBlockNumber, endBlo
         let response = await axios(options)
         return response
       } catch (error) {
-        console.log(error);
+        return error;
       }
 }
