@@ -2,7 +2,7 @@
 
 ![home-iOS](https://i.ibb.co/z42ZFZB/home-iOS.png)
 
-## Configuration project
+## Project settings
 
 ```sh
 run> git clone https://github.com/pabloisaac/crypto-wallet.git
