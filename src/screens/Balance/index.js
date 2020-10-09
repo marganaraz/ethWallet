@@ -3,14 +3,14 @@ import { Text, View, StyleSheet } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons'; 
 import Spinner from '../../components/spinner';
 
-const Balance = ({balance, spinnerBalance}) => {
+const Balance = ({balance, spinnerBalance, icon, token}) => {
 
   return (
     <View style={styles.container}>
         <View style={styles.icon}>
-            <FontAwesome5 name="ethereum" size={100} color="black"/>
+            <FontAwesome5 name={icon} size={70} color="black"/>
         </View>
-        {!spinnerBalance && <Text style={styles.text}>{balance ? balance + " ETH" : "Error al obtener balance del usuario"}</Text>}
+        {!spinnerBalance && <Text style={styles.text}>{balance ? balance + " " + token  : "Error al obtener balance del usuario"}</Text>}
         {spinnerBalance && <Spinner />}
     </View>
   )
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     },
     text:{
         fontSize: 25,
-        marginTop: 50,
+        marginTop: 40,
         textAlign: 'center',
     },
     icon:{

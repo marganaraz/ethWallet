@@ -1,15 +1,19 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import { Header } from 'react-native-elements'; 
 import { FontAwesome5 } from '@expo/vector-icons'; 
+import * as Constants from '../../utils/constants';
 
 const HeaderComponent = () => {
   return (
+    <>
     <Header
         leftComponent={<FontAwesome5 name="ethereum" size={35} color="white"/>}
-        centerComponent={{ text: 'CRYPTO WALLET', style: styles.text}}
+        centerComponent={{ text: 'ETH WALLET', style: styles.text}}
         containerStyle={styles.header}
     />
+    <Text style={{textAlign: 'center'}}>Account: {Constants.ADDRESS_ACCOUNT}</Text>
+    </>
   )
 
 }
